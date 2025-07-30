@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicShop - Tienda de Instrumentos Musicales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Aquí puedes agregar el favicon si lo deseas -->
+    <link rel="icon" href="img/logo.png">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50" id="header">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <!-- Logo principal -->
+            <img src="img/logo.png" alt="Logo MaykolMusic" class="h-14 w-14 rounded-full object-cover mr-3 border-2 border-gray-200">
+            <span class="text-2xl font-bold text-gray-800">MaykolMusic</span>
+        </div>
+        
+        <nav class="hidden md:flex">
+            <ul class="flex space-x-8">
+                <li><a href="#inicio" class="text-red-600 font-medium hover:text-red-800 transition">Inicio</a></li>
+                <li><a href="#nosotros" class="text-gray-600 font-medium hover:text-red-600 transition">Nosotros</a></li>
+                <li><a href="#servicios" class="text-gray-600 font-medium hover:text-red-600 transition">Servicios</a></li>
+                <li><a href="#contacto" class="text-gray-600 font-medium hover:text-red-600 transition">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 py-2">
+        <ul class="space-y-3">
+            <li><a href="#inicio" class="block text-red-600 font-medium">Inicio</a></li>
+            <li><a href="#nosotros" class="block text-gray-600 font-medium hover:text-red-600">Nosotros</a></li>
+            <li><a href="#servicios" class="block text-gray-600 font-medium hover:text-red-600">Servicios</a></li>
+            <li><a href="#contacto" class="block text-gray-600 font-medium hover:text-red-600">Contacto</a></li>
+        </ul>
+    </div>
+</header>
+
+    <!-- Inicio Section -->
+    <section id="inicio" class="pt-16">
+        <div class="slider-container relative bg-gray-100 h-96">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <div class="h-96 bg-gray-100 relative flex items-center justify-center">
+                    <!-- Imagen a la izquierda, más estirada y formato 16:9 -->
+                    <div class="flex items-center justify-end w-1/2 h-full">
+                        <div class="w-[480px] aspect-video relative rounded-lg overflow-hidden shadow-lg bg-white bg-opacity-90 flex items-center justify-center">
+                            <img src="img/imagen1.jpg" alt="Slide 1" class="w-full h-full object-cover opacity-80" />
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-start w-1/2 h-full">
+                        <div class="max-w-lg bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
+                            <h2 class="text-4xl font-bold text-gray-800 mb-4">Los mejores instrumentos musicales</h2>
+                            <p class="text-gray-600 mb-6">Descubre nuestra amplia selección de instrumentos de alta calidad para músicos profesionales y aficionados.</p>
+                            <a href="#productos" class="bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition">Ver catálogo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="h-96 bg-gray-100 relative flex items-center justify-center">
+                    <div class="flex items-center justify-end w-1/2 h-full">
+                        <div class="w-[480px] aspect-video relative rounded-lg overflow-hidden shadow-lg bg-white bg-opacity-90 flex items-center justify-center">
+                            <img src="img/imagen2.jpg" alt="Slide 2" class="w-full h-full object-cover opacity-80" />
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-start w-1/2 h-full">
+                        <div class="max-w-lg bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
+                            <h2 class="text-4xl font-bold text-gray-800 mb-4">Clases y talleres</h2>
+                            <p class="text-gray-600 mb-6">Aprende a tocar tu instrumento favorito con nuestros profesores experimentados. Clases para todos los niveles.</p>
+                            <a href="#servicios" class="bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition">Inscríbete ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="h-96 bg-gray-100 relative flex items-center justify-center">
+                    <div class="flex items-center justify-end w-1/2 h-full">
+                        <div class="w-[480px] aspect-video relative rounded-lg overflow-hidden shadow-lg bg-white bg-opacity-90 flex items-center justify-center">
+                            <img src="img/imagen3.jpg" alt="Slide 3" class="w-full h-full object-cover opacity-80" />
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-start w-1/2 h-full">
+                        <div class="max-w-lg bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
+                            <h2 class="text-4xl font-bold text-gray-800 mb-4">Servicio técnico especializado</h2>
+                            <p class="text-gray-600 mb-6">Reparación y mantenimiento de instrumentos por técnicos certificados. ¡Tu instrumento en las mejores manos!</p>
+                            <a href="#servicios" class="bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition">Solicitar servicio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a class="prev absolute top-1/2 left-4 -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-80 w-10 h-10 rounded-full flex items-center justify-center text-gray-800 cursor-pointer z-10 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </a>
+            <a class="next absolute top-1/2 right-4 -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-80 w-10 h-10 rounded-full flex items-center justify-center text-gray-800 cursor-pointer z-10 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+            
+            <div class="dots-container absolute bottom-4 left-0 right-0 flex justify-center">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <div class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Bienvenidos a MaykolMusic</h2>
+                <p class="text-gray-600 text-center max-w-3xl mx-auto mb-8">
+                    En MaykolMusic encontrarás todo lo que necesitas para tu pasión musical. Desde instrumentos de alta calidad hasta accesorios, equipos de sonido y servicios profesionales para músicos de todos los niveles.
+                </p>
+                <div class="flex justify-center">
+                    <a href="#productos" class="bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition inline-block">Explorar productos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Sobre Nosotros</h2>
+        
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-1/2 flex items-center justify-center">
+                <!-- Imagen sobre nosotros centrada -->
+                <img src="img/nosotros.jpg" alt="Sobre Nosotros" class="w-full h-96 object-cover rounded-lg">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Nuestra Historia</h3>
+                <p class="text-gray-600 mb-6">
+                    Fundada en 2003, MaykolMusic nació de la pasión por la música y el compromiso de ofrecer instrumentos de calidad a precios accesibles. Lo que comenzó como una pequeña tienda familiar, se ha convertido en un referente para músicos profesionales y aficionados.
+                </p>
+                <p class="text-gray-600 mb-8">
+                    Contamos con un equipo de expertos músicos que te asesorarán en la elección del instrumento perfecto para ti. Nuestra filosofía se basa en la calidad, el servicio personalizado y la pasión por la música que compartimos con nuestros clientes.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Nuestro equipo -->
+        <div class="mt-16">
+            <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Nuestro Equipo</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Miembro 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <!-- Foto del miembro 1 -->
+     <img src="img/maykol.jpg" alt="Maykol" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"> 
+                    
+                    <h4 class="text-xl font-bold text-gray-800 mb-1">Maykol Polo</h4>
+                    <p class="text-red-600 mb-3">Director General</p>
+                    <p class="text-gray-600 text-sm">Músico profesional con más de 25 años de experiencia en la industria musical.</p>
+                </div>
+                
+                <!-- Miembro 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <!-- Foto del miembro 2 -->
+                    <img src="img/adelaido.jpg" alt="adelaido" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                   
+                    <h4 class="text-xl font-bold text-gray-800 mb-1">Adelaido Solis</h4>
+                    <p class="text-red-600 mb-3">Jefa de Ventas</p>
+                    <p class="text-gray-600 text-sm">Especialista en guitarras y bajos con amplia experiencia en asesoramiento musical.</p>
+                </div>
+                
+                <!-- Miembro 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <!-- Foto del miembro 3 -->
+  <img src="img/luis.jpg" alt="luis" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"> 
+            
+                    <h4 class="text-xl font-bold text-gray-800 mb-1">Luis Laveriano</h4>
+                    <p class="text-red-600 mb-3">Técnico Principal</p>
+                    <p class="text-gray-600 text-sm">Luthier certificado con más de 15 años reparando y ajustando instrumentos.</p>
+                </div>
+                
+                <!-- Miembro 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <!-- Foto del miembro 4 -->
+                    <img src="img/mariana.jpg" alt="mari" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"> 
+                   
+                    <h4 class="text-xl font-bold text-gray-800 mb-1">Mariana Huaman</h4>
+                    <p class="text-red-600 mb-3">Coordinadora de Clases</p>
+                    <p class="text-gray-600 text-sm">Profesora de música con experiencia en conservatorio y escuelas de música.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Productos Section -->
+    <section id="productos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Nuestros productos destacados</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Producto 1 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200">
+                        <!-- Imagen producto 1 -->
+               <img src="img/guitar.jpg" alt="Guitarras Acústicas" class="w-full h-full object-cover">
+                        <!-- ...existing code... -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Guitarras Acústicas</h3>
+                        <p class="text-gray-600 mb-4">Amplia selección de guitarras acústicas de las mejores marcas, para principiantes y profesionales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-bold">Desde S/200</span>
+                            <button class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center hover:bg-red-200 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200">
+                        <!-- Imagen producto 2 -->
+        <img src="img/bateria.jpg" alt="Baterías y Percusión" class="w-full h-full object-cover"> 
+                        <!-- ...existing code... -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Baterías y Percusión</h3>
+                        <p class="text-gray-600 mb-4">Todo en baterías acústicas, electrónicas y percusión para todos los estilos musicales.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-bold">Desde S/499</span>
+                            <button class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center hover:bg-red-200 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200">
+                        <!-- Imagen producto 3 -->
+                 <img src="img/piano.jpg" alt="Teclados y Pianos" class="w-full h-full object-cover"> 
+                        <!-- ...existing code... -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Teclados y Pianos</h3>
+                        <p class="text-gray-600 mb-4">Pianos digitales, sintetizadores y teclados MIDI para estudio y presentaciones en vivo.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-bold">Desde S/399</span>
+                            <button class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center hover:bg-red-200 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition inline-block">Ver catálogo completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Nuestros Servicios</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <!-- Imagen servicio 1 -->
+                  <img src="img/servicio1.jpg" alt="Clases de Música" class="w-16 h-16 rounded-full mb-6 object-cover">
+                    
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Clases de Música</h3>
+                    <p class="text-gray-600 mb-4">
+                        Ofrecemos clases personalizadas para todos los niveles e instrumentos. Nuestros profesores son músicos profesionales con amplia experiencia en enseñanza.
+                    </p>
+                    <ul class="text-gray-600 mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Clases individuales y grupales
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Todos los niveles: principiante a avanzado
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Horarios flexibles
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="text-red-600 font-medium hover:text-red-800 transition flex items-center">
+                        Solicitar información
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Servicio 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <!-- Imagen servicio 2 -->
+                   <img src="img/servicio2.jpg" alt="Reparación y Mantenimiento" class="w-16 h-16 rounded-full mb-6 object-cover"> 
+                    
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Reparación y Mantenimiento</h3>
+                    <p class="text-gray-600 mb-4">
+                        Nuestro equipo de técnicos especializados ofrece servicios de reparación, ajuste y mantenimiento para todo tipo de instrumentos musicales.
+                    </p>
+                    <ul class="text-gray-600 mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Diagnóstico gratuito
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Reparaciones con garantía
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Mantenimiento preventivo
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="text-red-600 font-medium hover:text-red-800 transition flex items-center">
+                        Solicitar servicio
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Servicio 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <!-- Imagen servicio 3 -->
+                <img src="img/marimusic.jpg" alt="Estudio de Grabación" class="w-16 h-16 rounded-full mb-6 object-cover"> 
+                    
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Estudio de Grabación</h3>
+                    <p class="text-gray-600 mb-4">
+                        Contamos con un estudio de grabación profesional equipado con la última tecnología para que puedas grabar tus proyectos musicales.
+                    </p>
+                    <ul class="text-gray-600 mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Equipos profesionales
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Ingeniero de sonido incluido
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Mezcla y masterización
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="text-red-600 font-medium hover:text-red-800 transition flex items-center">
+                        Reservar sesión
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Servicio 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <!-- Imagen servicio 4 -->
+                   <img src="img/sonido.jpg" alt="Alquiler de Equipos" class="w-16 h-16 rounded-full mb-6 object-cover"> 
+                   
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Alquiler de Equipos</h3>
+                    <p class="text-gray-600 mb-4">
+                        Ofrecemos servicio de alquiler de instrumentos y equipos de sonido para eventos, conciertos, ensayos y producciones.
+                    </p>
+                    <ul class="text-gray-600 mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Amplio catálogo de equipos
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Tarifas por hora, día o semana
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Servicio de entrega disponible
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="text-red-600 font-medium hover:text-red-800 transition flex items-center">
+                        Consultar disponibilidad
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promoción Section -->
+    <section class="py-16 bg-red-600 text-white relative overflow-hidden">
+    <!-- Imagen de fondo con opacidad -->
+    <img src="img/oferta.jpg" alt="Promoción especial" class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none select-none" />
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <h2 class="text-3xl font-bold mb-6">¡Promoción especial de temporada!</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+            Obtén un 15% de descuento en todos nuestros instrumentos y accesorios durante este mes. 
+            Además, recibe clases gratuitas con la compra de cualquier instrumento.
+        </p>
+        <a href="#productos" class="bg-white text-red-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition inline-block">
+            Ver promociones
+        </a>
+    </div>
+</section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Contáctanos</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-1/2">
+                    <!-- Imagen de contacto (opcional) -->
+                    <!-- <img src="imagenes/nombre_contacto.jpg" alt="Contacto" class="w-full mb-8 rounded-lg object-cover"> -->
+                    <form class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nombre completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" placeholder="Tu nombre">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Correo electrónico</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" placeholder="tu@email.com">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Asunto</label>
+                            <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                                <option value="" selected disabled>Selecciona una opción</option>
+                                <option value="info">Información general</option>
+                                <option value="purchase">Compra de instrumentos</option>
+                                <option value="classes">Clases de música</option>
+                                <option value="repair">Servicio técnico</option>
+                                <option value="studio">Estudio de grabación</option>
+                                <option value="rental">Alquiler de equipos</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-red-600 text-white py-3 rounded-lg font-medium hover:bg-red-700 transition">Enviar mensaje</button>
+                    </form>
+                </div>
+                
+                <div class="w-full md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Información de contacto</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800 mb-1">Dirección</h4>
+                                    <p class="text-gray-600">
+                                        Av. Principal #123<br>
+                                        Ciudad Musical, CP 12345
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800 mb-1">Teléfono</h4>
+                                    <p class="text-gray-600">(123) 456-7890</p>
+                                    <p class="text-gray-600">(123) 456-7891</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800 mb-1">Email</h4>
+                                    <p class="text-gray-600">info@musicshop.com</p>
+                                    <p class="text-gray-600">ventas@musicshop.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800 mb-1">Horario</h4>
+                                    <p class="text-gray-600">Lunes a Viernes: 9:00 AM - 8:00 PM</p>
+                                    <p class="text-gray-600">Sábados: 10:00 AM - 6:00 PM</p>
+                                    <p class="text-gray-600">Domingos: Cerrado</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-lg font-medium text-gray-800 mb-4">Síguenos en redes sociales</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white hover:bg-red-700 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white hover:bg-red-700 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white hover:bg-red-700 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white hover:bg-red-700 transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <!-- Logo footer -->
+                    <img src="img/logo.png" alt="Logo MaykolMusic" class="w-10 h-10 rounded-full mr-2"> 
+                    
+                        <span class="text-xl font-bold">MaykolMusic</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Tu tienda de instrumentos musicales de confianza desde 2003. Calidad, variedad y el mejor servicio para músicos de todos los niveles.
+                    </p>
+                    <p class="text-gray-400">
+                        Av. Principal #123<br>
+                        Ciudad Musical, CP 12345
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2">Nuestros servicios</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#productos" class="text-gray-400 hover:text-red-400 transition">Venta de instrumentos</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-red-400 transition">Reparación y mantenimiento</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-red-400 transition">Clases de música</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-red-400 transition">Alquiler de equipos</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-red-400 transition">Estudio de grabación</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 border-b border-gray-700 pb-2">Contacto</h3>
+                    <p class="flex items-center mb-3 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        (123) 456-7890
+                    </p>
+                    <p class="flex items-center mb-3 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        info@musicshop.com
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400">
+                <p>Todos los derechos @MaykolMusic 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Slider functionality
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        
+        function showSlide(n) {
+            // Reset slide index if out of bounds
+            if (n >= slides.length) slideIndex = 0;
+            if (n < 0) slideIndex = slides.length - 1;
+            
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active class from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show current slide and activate current dot
+            slides[slideIndex].classList.add('active');
+            dots[slideIndex].classList.add('active');
+        }
+        
+        // Next/previous controls
+        prevBtn.addEventListener('click', () => {
+            showSlide(--slideIndex);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            showSlide(++slideIndex);
+        });
+        
+        // Dot controls
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                slideIndex = index;
+                showSlide(slideIndex);
+            });
+        });
+        
+        // Auto slide
+        function autoSlide() {
+            showSlide(++slideIndex);
+        }
+        
+        // Start auto slide
+        let slideInterval = setInterval(autoSlide, 5000);
+        
+        // Pause auto slide on hover
+        const sliderContainer = document.querySelector('.slider-container');
+        
+        sliderContainer.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        sliderContainer.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(autoSlide, 5000);
+        });
+        
+        // Initialize slider
+        showSlide(slideIndex);
+        
+        // Form submission (prevent default for demo)
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+            contactForm.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Adjust for header height
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d8e0ae43b2e7a9',t:'MTc1MjI0Mjk1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d8e0ae43b2e7a9',t:'MTc1MjI0Mjk1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d8e0ae43b2e7a9',t:'MTc1MjI0Mjk1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d8e0ae43b2e7a9',t:'MTc1MjI0Mjk1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d8e0ae43b2e7a9',t:'MTc1MjI0Mjk1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d8e0ae43b2e7a9',t:'MTc1MjI0Mjk1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d8e0ae43b2e7a9',t:'MTc1MjI0Mjk1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d8e0ae43b2e7a9',t:'MTc1MjI0Mjk1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
